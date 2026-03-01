@@ -90,7 +90,7 @@ h2{text-align:center;margin-bottom:28px;}
 <p class="msg"><?php echo htmlspecialchars($msg); ?></p>
 
 <div class="link">
-<a href="register.php">New user? Register</a>
+<a href="register.php">New user? Registerrr</a>
 </div>
 </div>
 
