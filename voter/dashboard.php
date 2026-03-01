@@ -41,7 +41,7 @@ if($_SERVER["REQUEST_METHOD"]==="POST"){
     $total = $conn->query("SELECT COUNT(*) AS t FROM voters")->fetch_assoc()['t'];
     $voted = $conn->query("SELECT COUNT(*) AS v FROM voter_history WHERE referendum_id=$ref")->fetch_assoc()['v'];
 
-    if($total > 0 && ($voted / $total) == 0.5){
+    if($total > 0 && ($voted / $total) >= 0.5){
         $conn->query("UPDATE referendum SET status='closed', is_closed=1 WHERE referendum_id=$ref");
     }
 
